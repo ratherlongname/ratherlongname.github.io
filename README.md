@@ -1,8 +1,10 @@
 # ratherlongname.github.io
 
 ## TODO
-- [ ] Finalize some color scheme (sepia based?)
-- [ ] Homepage
-- [ ] Image support
-- [ ] Semantic html
-- [ ] Test lists, headings, emphasis, underline, strong
+- [ ] Basic post page, supporting
+    - [ ] Images
+    - [ ] Lists
+    - [ ] Headings
+    - [ ] Emphasis, underline, strong
+- [ ] Homepage, supporting
+    - [ ] List of all posts
