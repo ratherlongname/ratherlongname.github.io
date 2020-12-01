@@ -2,9 +2,9 @@
 
 ## TODO
 - [ ] Basic post page, supporting
-    - [ ] Images
+    - [x] Headings
+    - [x] Emphasis, underline, strong
     - [ ] Lists
-    - [ ] Headings
-    - [ ] Emphasis, underline, strong
+    - [ ] Images
 - [ ] Homepage, supporting
     - [ ] List of all posts
