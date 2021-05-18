@@ -9,6 +9,9 @@ help:
 	@echo "\t help \t Show this help"
 	@echo "\t clean \t Remove dist"
 
+deploy: build
+	git subtree push --prefix dist origin gh-pages
+
 build: dist/index.html dist/styles.css
 
 dist/index.html: src/index.html | dist
