@@ -4,4 +4,4 @@ https://ratherlongname.github.io
 
 ### TODO
 - [ ] Inline all css
-- [ ] Make favicon
+- [x] Make favicon
