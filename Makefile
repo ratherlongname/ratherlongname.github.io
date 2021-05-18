@@ -1,24 +1,24 @@
 .PHONY: build dev clean help
-.DEFAULT: build
+.DEFAULT: help
 
 help:
 	@echo "make <target>"
 	@echo "available targets:"
-	@echo "\t build \t Build deployable website in docs/"
+	@echo "\t build \t Build deployable website in dist/"
 	@echo "\t dev \t Make css file with all tailwind rules in src/"
 	@echo "\t help \t Show this help"
-	@echo "\t clean \t Remove docs"
+	@echo "\t clean \t Remove dist"
 
-build: docs/index.html docs/styles.css
+build: dist/index.html dist/styles.css
 
-docs/index.html: src/index.html | docs
+dist/index.html: src/index.html | dist
 	cp $^ $@
 
-docs/styles.css: tailwind.config.js docs/index.html | docs
+dist/styles.css: tailwind.config.js dist/index.html | dist
 	NODE_ENV=production npx tailwindcss-cli@latest build -o $@
 
-docs:
-	mkdir -p docs
+dist:
+	mkdir -p dist
 
 dev: src/styles.css
 
@@ -26,4 +26,4 @@ src/styles.css:
 	npx tailwindcss-cli@latest build -o $@
 
 clean:
-	-rm -rf docs
+	-rm -rf dist
